@@ -136,7 +136,7 @@ body{
     width: 20rem;
     height: 25rem;
     position: relative;
-    object-fit: cover;
+    object-fit: fill;
 }
 .right h2{
     color: var(--primary);
