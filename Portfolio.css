@@ -1,0 +1,509 @@
+/* CSS RESET  */
+*{
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* VARIABLES */
+:root{
+    --border : 2px solid red;
+    --primary : #3defd3;
+    --secondary : #070606;
+    --ternary : #898989;
+    --pure : #ffffff;
+    --dark : #161616;
+}
+/* BODY  */
+body{
+    width: 97vw;
+    height: fit-content;
+    overflow-x: hidden;
+    background-color: var(--dark);
+    color: white;
+    height: fit-content;
+}
+/* NAVBAR */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+#navbar #logo{
+    position: relative;
+    width: 6rem;
+    height: 3rem;
+    object-fit: cover;
+    margin-bottom: .2rem;
+    filter: invert(100%);
+    left: 2rem;
+}
+#NavList{
+    position: relative;
+    display: flex;
+    right: 2rem;
+}
+#NavList li{
+    list-style: none;
+    padding: 1rem 0rem;
+}
+#NavList li a{
+    color: var(--pure);
+    padding: 0rem .7rem;
+    text-decoration: none;
+}
+#NavList li a:hover{
+    background-color: darkmagenta;
+    border-radius: 1rem;
+}
+.hemburger{
+    margin-top: 1.5rem;
+    display: none;
+}
+.hemburger li{
+    list-style: none;
+}
+.hemburger li a{
+    padding: 0rem 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+#menu{
+    height: 1.3rem;
+    width: 1.3rem;
+    position: absolute;
+    right: 2rem;
+    filter: invert(100);
+}
+.menu{
+    z-index: 78;
+    position: absolute;
+    background-color: black;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 2rem;
+    display: none;
+}
+.menu li {
+    list-style: none;
+    margin: .2rem 0rem;
+    width: 5rem;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* HOME */
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    background: url("bg1.jpg") no-repeat center center/cover;
+    position: relative;
+    z-index: 5;
+    margin: 1rem 0;
+}
+.left ,
+.right{
+    width: 40vw;
+    position: relative;
+    padding: 2rem;
+    text-align: left;
+}
+.right p{
+    width: 35vw;
+    font-size: 1.1rem;
+    word-spacing: .2rem;
+}
+.right p a{
+    color: var(--primary);
+    text-decoration: none;
+}
+.left{
+    display: flex;
+    justify-content: flex-end;
+}
+#Homephoto{
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    object-fit: cover;
+}
+.right h2{
+    color: var(--primary);
+}
+.right h1{
+    color: var(--pure);
+    font-size: 3rem;
+}
+.btn{
+    background-color: transparent;
+    color: var(--primary);
+    padding: .3rem .5rem;
+    border: 2px solid var(--primary);
+    position: relative;
+    top: 1rem;
+}
+.btn:hover{
+    background-color: var(--ternary);
+    color: aliceblue;
+}
+/* ABOUT */
+#about{
+    background: url("bg2.jpg") no-repeat center center/cover;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    z-index: 5;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.Heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.big , .small{
+    height: .1rem;
+    width: 10rem;
+    background-color: burlywood;
+}
+.small{
+    width: 8rem;
+    margin-top: .2rem;
+}
+#Aboutphoto{
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    object-fit: contain;
+}
+/* SKILLS */
+.skills{
+    background: url("bg5.jpg") no-repeat center center/cover;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    z-index: 5;
+    margin: 1rem 0;
+}
+.skills .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+/* SERVICES */
+.services{
+    background: url("bg6.jpg") no-repeat center center/cover;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    z-index: 5;
+    margin: 2rem 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 92%;
+    margin: auto;
+}
+.box{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.box li{
+    list-style: none;
+}
+.box li p{
+    margin-top: .5rem;
+}
+.box li div{
+    width: 20rem;
+    height: 15rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(162, 197, 90);
+}
+/* PROJECTS */
+#projects{
+    background: url("bg3.jpg") no-repeat center center/cover;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    z-index: 5;
+    margin: 1rem 0;
+}
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 92%;
+    margin: auto;
+}
+#projects .box div{
+    height: 13rem;
+    width: 19rem;
+}
+#projects .box li div{
+    padding: 2rem;
+    background-color: wheat;
+}
+#projects .box li div:hover{
+    transform: scale(1.025);
+}
+.projects{
+    width: 19rem;
+    height: 14rem;
+    object-fit: contain;
+    position: relative;
+    bottom: 4rem;
+    right: 2rem;
+}
+.project_name{
+    position: relative;
+    bottom: 5rem;
+    left: 2rem;
+    right: 0;
+}
+#projects .box a{
+    text-decoration: none;
+}
+/* CONTACT ME */
+.contact{
+    background-color: var(--ternary);
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    z-index: 5;
+    margin-top: 1rem;
+}
+.contact .right{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    margin: auto;
+}
+.contact ul{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.contacts{
+    width: 5rem;
+    height: 3rem;
+    padding: 0rem 1rem;
+}
+.CONTACTmE{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+#MainFooter{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0;
+}
+#MainFooter a{
+    text-decoration: none;
+    background-color: var(--secondary);
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10rem;
+    align-items: center;
+}
+
+/*////////////////// RESPONSIVENESS ///////////////////  */
+
+@media screen and (max-width : 750px) {
+    .right h2{
+        font-size: 1rem;
+    }
+    .right h1{
+        font-size: 2rem;
+    }
+    .right p{
+        font-size: 1rem;
+        word-spacing: .2rem;
+    }
+    .box li div{
+        width: 15rem;
+        height: 12rem;
+    }
+    .box li h2{
+        font-size: 1.2rem;
+    }
+    .box li p{
+        font-size: .8rem;
+    }
+    #projects .box li div{
+        width: 15rem;
+        height: 11rem;
+    }
+    .projects{
+        width: 15rem;
+        height: 11rem;
+    }
+    #Aboutphoto{
+        width: 15rem;
+        height: 20rem;
+    }
+}
+@media screen and (max-width : 639px) {
+    #NavList{
+        display: none;
+    }
+    .hemburger{
+        display: flex;
+    }
+    #Aboutphoto{
+        width: 12rem;
+        /* height: 15rem; */
+    }
+}
+@media screen and (max-width : 567px) {
+    .box li div{
+        width: 12rem;
+        height: 9rem;
+    }
+    .box li h2{
+        font-size: .8rem;
+        margin: 0;
+    }
+    .box li p{
+        font-size: .6rem;
+    }
+    #projects .box li div{
+        width: 11rem;
+        height: 7rem;
+    }
+    .projects{
+        width: 11rem;
+        height: 7rem;
+    }
+    .projects{
+        bottom: 3rem;
+        right: 2rem;
+    }
+    .project_name{
+        bottom: 3.5rem;
+        left: 0;
+        width: 10rem;
+    }
+    .right h2{
+        font-size: .8rem;
+    }
+    .right h1{
+        font-size: 1.5rem;
+    }
+    .right p{
+        font-size: .8rem;
+        word-spacing: .1rem;
+    }
+    #Homephoto, #Aboutphoto{
+        width: 15rem;
+        height: 15rem;
+    }
+    .btn{
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width : 461px) {
+    .box li div{
+        width: 9rem;
+        height: 6rem;
+    }
+    .box li h2{
+        font-size: .5rem;
+    }
+    .box li p{
+        font-size: .4rem;
+    }
+    #projects .box li div{
+        width: 8rem;
+        height: 5rem;
+    }
+    .projects{
+        width: 8rem;
+        height: 5rem;
+        bottom: 3rem;
+        right: 2rem;
+    }
+    .project_name{
+        bottom: 3rem;
+    }
+    .right h2{
+        font-size: .6rem;
+    }
+    .right h1{
+        font-size: 1rem;
+    }
+    .right p{
+        font-size: .6rem;
+    }
+    #Homephoto, #Aboutphoto{
+        width: 10rem;
+        height: 10rem;
+    }
+    .menu li {
+        margin: 0rem;
+        font-size: .6rem;
+    }
+    #MainFooter a{
+        width: 2rem;
+        height: 2rem;
+    }
+    .contacts{
+        width: 4rem;
+        height: 2rem;
+    }
+    .btn{
+        font-size: .4rem;
+        top: .3rem;
+    }
+    .Heading{
+        font-size: .7rem;
+    }
+    .big , .small{
+        width: 6rem;
+    }
+    .small{
+        width: 5rem;
+    }
+    #navbar #logo{
+        height: 2rem;
+        top: 1rem;
+    }
+}
